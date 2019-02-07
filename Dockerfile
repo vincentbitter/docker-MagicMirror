@@ -12,7 +12,7 @@ RUN npm install --unsafe-perm --silent
 
 COPY docker-entrypoint.sh /opt
 RUN apt-get update \
-  && apt-get -qy install dos2unix \
+  && apt-get -qy install dos2unix libopencv-dev python-opencv \
   && dos2unix /opt/docker-entrypoint.sh \
   && chmod +x /opt/docker-entrypoint.sh
 
